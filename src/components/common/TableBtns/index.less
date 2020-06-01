@@ -1,0 +1,28 @@
+@import '../../../assets/less/vars.less';
+@import '../../../assets/less/antdCom.less';
+
+.table-btn{
+  padding: 18px 0 6px 0;
+  display: flex;
+  justify-content: space-between;
+  .left-btn{
+    //table左边按钮
+    .btn-left{
+      .btn-style(@btn-green-color,@font-green-color);
+      &:hover,&:focus{
+        .btn-color(@btn-green-color);
+        color:  @font-green-color;
+      }
+    }
+  }
+  .right-btn{
+    //table右边按钮
+    .btn-right{
+      .btn-style(@btn-blue-color,@font-blue-color);
+      &:hover,&:focus{
+        .btn-color(@btn-blue-color);
+        color:  @font-blue-color;
+      }
+    }
+  }
+}

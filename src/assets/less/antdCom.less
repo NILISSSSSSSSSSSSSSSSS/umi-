@@ -1,0 +1,505 @@
+@import './vars.less';
+
+/********************************************** antd style **************************************************/
+.ant-layout.ant-layout-has-sider {
+  height: 100%;
+}
+
+//********通用框 ******/
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-select-selection:hover,
+.ant-select-selection:focus,
+.ant-select-selection:active,
+.ant-select-open .ant-select-selection,
+.ant-input:hover,
+.ant-input:active,
+.ant-input:focus,
+.ant-input-affix-wrapper:hover,
+.ant-input-affix-wrapper:active,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled),
+.ant-calendar-picker:hover .ant-calendar-picker-input:not(.ant-input-disabled),
+.ant-calendar-picker:focus .ant-calendar-picker-input:not(.ant-input-disabled),
+.ant-input-number:hover,
+.ant-input-number:active,
+.ant-input-number-focused,
+.ant-pagination-item:hover,
+.ant-pagination-item:focus,
+.ant-pagination-options-quick-jumper input:hover,
+.ant-pagination-options-quick-jumper input:focus {
+  border-color: @blue-color;
+}
+
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-prev:focus .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link,
+.ant-pagination-next:focus .ant-pagination-item-link {
+  border-color: @blue-color;
+  color: @blue-color;
+}
+
+//必填项未填写
+.has-error .ant-checkbox:hover .ant-checkbox-inner,
+.has-error .ant-select-selection:hover,
+.has-error .ant-select-selection:focus,
+.has-error .ant-select-selection:active,
+.has-error .ant-select-open .ant-select-selection,
+.has-error .ant-input-number:hover,
+.has-error .ant-input-number:active,
+.has-error .ant-input-number-focused {
+  border-color: @red-color;
+}
+
+.ant-pagination-item:hover a {
+  color: @blue-color;
+}
+
+//********按钮 ******/
+.btn-color(@color) {
+  background-color: @color;
+  border-color: @color;
+}
+
+.btn-style(@btn, @font) {
+  min-width: 68px;
+  width: auto;
+  background: @btn;
+  color: @font;
+  border-color: transparent;
+  --antd-wave-shadow-color: @font;
+}
+
+//查询
+.ant-btn-primary {
+  background-color: @blue-color;
+  border-color: @blue-color;
+  width: 90px;
+  border-radius: 2px;
+
+  &:hover,
+  &:focus {
+    .btn-color(@blue-color);
+  }
+}
+
+//重置
+.ant-btn-background-ghost.ant-btn-primary {
+  color: @blue-color;
+  border: 1px solid @blue-color;
+
+  &:hover,
+  &:focus {
+    .btn-color(@blue-color);
+    color: @blue-color;
+  }
+}
+
+//table左边按钮
+.btn-left {
+  .btn-style(@btn-green-color, @font-green-color);
+
+  &:hover,
+  &:focus {
+    .btn-color(@btn-green-color);
+    color: @font-green-color;
+  }
+}
+
+//table右边按钮
+.btn-right {
+  .btn-style(@btn-blue-color, @font-blue-color);
+
+  &:hover,
+  &:focus {
+    .btn-color(@btn-blue-color);
+    color: @font-blue-color;
+  }
+}
+
+//********表格 ******/
+.ant-table-content{
+  table{
+    th,td{
+        height: 48px;
+        padding: 0 16px ;
+      }
+  }
+}
+.ant-table-wrapper {
+  .ant-table-content {
+    .ant-table-body {
+      table {
+        .ant-table-thead>tr>th {
+          background: @table-th-color;
+        }
+
+        .tr,
+        th {
+          line-height: normal;
+
+          td {
+            //不能添加 position: relative,否则表格中的下拉菜单会错位
+            // position: relative;
+            height: 48px!important;
+            padding: 0 16px;
+          }
+        }
+
+        tr:hover td {
+          background: @table-td-color;
+        }
+
+        tr td:first-child {
+          padding-left: 40px;
+        }
+
+        tr th:first-child {
+          padding-left: 40px;
+        }
+
+        tr td:last-child {
+          padding-right: 20px;
+        }
+
+        tr th:last-child {
+          padding-right: 20px;
+        }
+      }
+
+      .ant-table-tbody {
+        tr.ant-table-row:nth-child(even) {
+          background-color: @table-row-color;
+        }
+
+        tr.ant-table-row-selected td {
+          background-color: rgba(0, 0, 0, 0);
+        }
+      }
+    }
+
+    .ant-checkbox:hover{
+      border-color: @blue-color;
+    }
+
+    .ant-checkbox:active{
+      border-color: @blue-color;
+    }
+
+    .ant-checkbox-input:focus{
+      border-color: @blue-color;
+      outline-color: @blue-color;
+    }
+
+    //表格 全选复选框 背景色
+    .ant-checkbox-indeterminate .ant-checkbox-inner:after {
+      background-color: @blue-color;
+    }
+
+    //表格 复选框背景色
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: @blue-color;
+      border-color: @blue-color;
+    }
+
+    //无数据时 背景图
+    .ant-table-placeholder {
+      background-image: url('~@/assets/images/noData.svg');
+      background-repeat: no-repeat;
+      height: 400px;
+      background-position-x: calc(~'100% / 2');
+      background-position-y: calc(~'100% / 2');
+
+      &::before {
+        content: '暂无数据';
+        position: relative;
+        width: 100px;
+        height: 50px;
+        top: 280px;
+        ;
+        left: calc(~'100% / 2 - 50px');
+        display: block;
+        z-index: 99;
+        font-family: PingFangSC-Regular;
+        font-size: 16px;
+        color: @detail-label-color;
+      }
+
+      .ant-empty-description,
+      img {
+        display: none;
+      }
+    }
+  }
+
+  //分页
+  .ant-table-pagination {
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 38px;
+    font-size: 12px;
+    text-align: center;
+    float: none;
+
+    li.ant-pagination-prev {
+      margin-left: 10px
+    }
+
+    .ant-pagination-total-text {
+      float: left;
+      color: @pagination-text-color;
+    }
+
+    li {
+      border-radius: 2px;
+    }
+
+    .ant-select {
+      font-size: 12px;
+    }
+
+    .ant-pagination-item-active {
+      border: @blue-color;
+      background: @blue-color;
+
+      a {
+        color: @whitw-color
+      }
+    }
+
+    .ant-pagination-item-container {
+      .anticon.anticon-double-right.ant-pagination-item-link-icon {
+        color: @blue-color;
+      }
+    }
+  }
+}
+
+//table图片，分页，底部按钮对齐
+.ant-table-wrapper {
+  .ant-pagination.ant-table-pagination {
+    li.ant-pagination-prev {
+      margin-left: -150px
+    }
+  }
+}
+
+.ant-pagination.table-pagination {
+  li.ant-pagination-prev {
+    margin-left: -100px
+  }
+
+  .ant-select-dropdown-menu {
+    li {
+      margin: 0;
+    }
+  }
+}
+
+//隐藏table表头全选项和禁止状态勾选项
+.disabled-select-table thead .ant-table-selection,
+.selection-hide .ant-table-selection-column span {
+  display: none;
+}
+
+// 操作列按钮
+.operate-wrap {
+  white-space: normal;
+
+  a {
+    color: #3B6CFF;
+
+    &:hover {
+      background: rgb(235, 240, 255);
+      border-radius: 2px;
+    }
+
+    &:focus {
+      background: rgb(225, 232, 255);
+    }
+  }
+
+  &>* {
+    padding: 2px 8px;
+    display: inline-block;
+  }
+
+  .operate-item {
+    color: #1890ff;
+    cursor: pointer;
+    padding: 0 10px;
+  }
+}
+
+//********下拉菜单(单选，多选) ******/
+.ant-select-dropdown {
+  border: 1px solid @select-dropdown-color;
+  box-shadow: none;
+
+  .ant-select-dropdown-menu {
+    max-height: 200px;
+
+    li {
+      font-size: 12px;
+      color: @select-dropdown-li-color;
+
+      &.ant-select-dropdown-menu-item-disabled {
+        color: rgba(0, 0, 0, 0.25);
+        cursor: not-allowed;
+      }
+    }
+
+    .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled),
+    .ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+      background-color: @select-dropdown-bg-color;
+    }
+  }
+}
+
+//******** header ******/
+.ant-dropdown {
+  .ant-dropdown-menu-item {
+    padding: 5px 18px;
+
+    &:hover {
+      background-color: #fff;
+      color: #3B6CFF;
+    }
+  }
+}
+.ant-modal-confirm{
+  width: 400px !important;
+  .ant-modal-content{
+    padding:0;
+    width: 400px;
+    height: 173px;
+  }
+  .ant-modal-body{
+    position: relative;
+    padding:0;
+    i{
+      position: absolute;
+      right: -5px;
+      top:10px;
+      color:#A7ACB7 !important;
+      font-size: 16px;
+    }
+  }
+  .ant-modal-confirm-content{
+    margin:40px 0 50px 0 !important;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+  }
+  .ant-modal-confirm-btns{
+    float: none;
+    margin:0 auto;
+    width: 210px;
+    height: 32px;
+    button{
+      width: 90px;
+      border-radius: 2px;
+    }
+    button:first-child{
+      float: right;
+      color: #3B6CFF;
+      border: 1px solid #3B6CFF;
+    }
+    button:last-child{
+      float: left;
+      margin-left:0;
+    }
+  }
+}
+
+//********弹窗 ******/
+.ant-modal-wrap {
+  .ant-modal-content {
+    border-radius: 4px;
+
+    .ant-modal-header {
+      padding: 0;
+      text-align: center;
+      font-size: 16px;
+      color: @whitw-color;
+      background: @main-color;
+      border-radius: 0;
+
+      .ant-modal-title {
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        color: @whitw-color;
+      }
+    }
+
+    .ant-modal-close-x {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+
+      .anticon {
+        color: #A7ACB7;
+      }
+    }
+  }
+}
+
+.ant-form {
+  overflow: visible;
+}
+
+.ant-tabs .ant-tabs-content {
+  .table-btn {
+    padding: 20px 0 0 0;
+  }
+
+  .ant-table-wrapper {
+    margin-top: 15px;
+  }
+}
+
+.ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-tab:hover {
+  color: #05CC7F !important;
+}
+
+.ant-tabs-ink-bar {
+  background-color: #05CC7F !important;
+}
+
+.ant-tabs-top-bar {
+  margin: 0;
+  border-bottom: none !important;
+  background: #fff;
+
+  .ant-tabs-nav-container {
+    border-bottom: 1px solid #e8e8e8
+  }
+
+  .ant-tabs-nav {
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+  }
+}
+
+.relate-port{
+  .ant-table-tbody{
+    border-top:1px solid rgba(128, 128, 128, .2);
+  }
+  .ant-table-thead{
+    display: none;
+  }
+}
+
+// 表头修改待选项
+.table-header-select{
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  label.ant-checkbox-wrapper{
+    margin: 0 0 10px 0;
+  }
+}

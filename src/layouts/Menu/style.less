@@ -1,0 +1,104 @@
+@border: 1px solid #ddd;
+@white: #fff;
+.menu{
+  height: 100%;
+  overflow-y: auto;
+  overflow-x:hidden;
+  //width: 220px;
+  background: #39487D;
+  color: #FFFFFF;
+  font-size: 14px;
+  &:not(.ant-menu-horizontal) .ant-menu-item-selected{
+    background: #334070;
+    border-radius: 2px 0 0 2px;
+  }
+  //菜单高亮
+  .active{
+    color: #05CC7F !important;
+  }
+  .ant-menu-item > a{
+    color: #fff;
+  }
+  .ant-menu-item-selected > a{
+    svg path{
+      fill: #05CC7F;
+    }
+  }
+  .ant-menu-item{
+    opacity: 0.7;
+    margin-bottom: 0 !important;
+    margin-top: 0;
+    height: 50px !important;
+    line-height: 50px !important;
+    &::after{
+      display: none;
+    }
+  }
+  .ant-menu-sub{
+    .ant-menu-item, .ant-menu-submenu-title{
+      padding-left: 52px !important;
+    }
+    .ant-menu-sub{
+      // padding-left: 12px;
+      text-indent: 12px;
+    }
+  }
+
+  .ant-menu-submenu > .ant-menu{
+    background: #39487D;
+  }
+  .ant-menu-submenu-title{
+    opacity: 0.7;
+    margin-bottom: 0;
+    margin-top: 0;
+    height: 50px !important;
+    line-height: 50px !important;
+  }
+  .ant-menu-submenu-title{
+    color: #fff;
+    &:hover{
+      color: #fff;
+    }
+  }
+  .ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title{
+    color: #fff;
+  }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+    background: #334070;
+    border-radius: 2px 0 0 2px;
+  }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-active{
+    background: #2C3862;
+    border-radius: 2px 0 0 2px;
+  }
+  .ant-menu-submenu-active{
+    background: #2C3862;
+    border-radius: 2px 0 0 2px;
+  }
+  .ant-menu-submenu-arrow::after{
+    background: #9ba2bd;
+  }
+  .ant-menu-submenu-arrow::before{
+    background: #9ba2bd;
+  }
+  .ant-menu-submenu.ant-menu-submenu-inline,.ant-menu-root.ant-menu-inline, .ant-menu-item{
+    svg{
+      margin-right: 8px;
+      margin-left: -15px;
+      margin-top: -3px;
+      vertical-align: middle;
+      path{
+        fill: #8891B1;
+      }
+    }
+  }
+  .ant-menu-submenu.ant-menu-submenu-inline.ant-menu-submenu-open.ant-menu-submenu-selected{
+    ul{
+      background-color: rgb(51, 64,112)
+    }
+    background-color: rgb(51, 64,112);
+    svg path{
+      fill: #05CC7F;
+    }
+  }
+}

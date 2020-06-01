@@ -1,0 +1,145 @@
+.login-content{
+  min-width: 1366px;
+  .header{
+    height: 100px;
+    padding: 0 40px;
+    background-color: #f7f9fc;
+    line-height: 100px;
+    .header-icon{
+        img{
+           width: 134px; 
+        }
+    }
+  }
+  .ant-layout-content{
+    display: flex;
+    align-items: stretch;
+    .img-container{
+      width: 60%;
+      text-align: center;
+      .img-wrap{
+        margin-top: 120px;
+        img{
+          width: 58%;
+        }
+      }
+      h1{
+        font-size: 34px;
+        margin-top: 45px;
+      }
+    }
+    .content-login{
+      width: 40%;
+      display: inline-block;
+      padding: 40px 0;
+      background: linear-gradient(to bottom,#6F86D6,#47C6EF);
+      .login-icon{
+        text-align: center;
+        img{
+          width: 94px;
+        }
+      }
+      h1{
+        margin: 36px 40px;
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+      }
+      .form-wrap{
+        margin: 0 auto;
+        width: 400px;
+        background-color: #fff;
+        padding: 40px 30px;
+        .tips{
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+          margin-bottom: 18px;
+          background:rgba(255,160,37,0.10);
+          border:1px solid rgba(255,160,37,0.60);
+          border-radius:2px;
+          color: #666;
+          font-size: 12px;
+          padding: 0 10px;
+          img{
+            width: 12px;
+            margin-right: 5px;
+          }
+        }
+        .input-passwords{
+          .ant-form-explain{
+            position: relative;
+            top: 8px;
+            margin-bottom: 12px;
+          }
+        }
+        .input-password2{
+          position: relative;
+          top: -36px;
+        }
+        .input-password{
+          opacity: 0;
+          position: relative;
+          width: 0px;
+          height: 0px;
+          z-index: 0;
+        }
+        .input-item{
+          border:1px solid rgba(0,0,0,0.15);
+          height: 42px;
+          border-radius: 2px;
+          overflow: hidden;
+          .ant-input{
+            border: none !important;
+            &:focus{
+              box-shadow: none;
+            }
+          }
+        }
+        .input-code-item{
+          .ant-form-item-children{
+            display: flex;
+            justify-content: space-between;
+            .ant-input{
+              height: 42px;
+              border-radius: 2px;
+              width: 210px;
+            }
+            .code-img{
+              width: 120px;
+              border: 1px solid #d9d9d9;
+              height: 42px;
+              border-radius: 2px;
+              overflow: hidden;
+              img{
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+        }
+        .login-btn{
+          width: 100%;
+          height: 48px;
+          background:#1890ff;
+          border-radius:2px;
+        }
+      }
+    }
+  }
+  .footer{
+    text-align: center;
+    padding: 0 50px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #f7f9fc;
+    p{
+      margin-bottom: 0;
+    }
+  }
+  .loginCss{
+    height: 768px;
+  }
+}

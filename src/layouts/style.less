@@ -1,0 +1,62 @@
+@import '../assets/less/common.less';
+@import '../assets/less/vars.less';
+@import '../assets/less/antdCom.less';
+
+
+@prefixCls: BasicLayout;
+
+.@{prefixCls} {
+    height:100%;
+
+    //header
+    .ant-layout-header {
+        position: relative;
+        box-shadow: 0 2px 6px 0 rgba(59,108,255,0.10);
+        z-index: 1;
+        .header-left{
+            display: inline-block;
+            h1{
+                display: inline-block;
+                font-size: 18px;
+            }
+            img{
+                width: 220px;
+                margin: 0 10px;
+            }
+
+        }
+
+        .header-right {
+            display: inline-block;
+            position: absolute;
+            right: 35px;
+
+            .ant-badge-count {
+                left: 18px;
+            }
+
+            span {
+                margin-left: 5px;
+                color: #8B909A;
+            }
+            .user-name{
+                cursor: pointer;
+            }
+            .anticon {
+                cursor: pointer;
+                font-size: 20px;
+                margin-left: 30px;
+            }
+            .ant-avatar-sm{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    //footer
+    .footer {
+        text-align: center;
+    }
+    
+}

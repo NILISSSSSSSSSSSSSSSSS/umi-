@@ -1,0 +1,84 @@
+.register-content{
+  background-color: #fff;
+  .trees-content{
+    width: 100%;
+    .ant-row.ant-form-item{
+      display: flex;
+      width: 100%;
+    }
+    padding: 0px 40px;
+    .ant-col.ant-form-item-label{
+      flex: 0 0 110px;
+    }
+    .ant-col.ant-form-item-control-wrapper{
+      flex: 0 0 calc(~'100% - 110px');
+    }
+  }
+  .detail-content{
+    padding-top: 0;
+    box-shadow: none;
+    .ant-row.ant-form-item{
+      display: flex;
+      flex-direction: row;
+      & > div:nth-child(1){
+        flex: 0 0 100px;
+        text-align: center;
+        & ~ div{
+          flex: 0 0 calc(~'100% - 100px')
+        }
+      }
+    }
+    .button-center.form-button-center{
+      margin-top: 200px;
+    }
+  }
+  // .ant-input-affix-wrapper .ant-input:not(:last-child) {
+  //   padding-right: 0px;
+  // }
+  .ant-form.ant-form-inline.new-flex-layout .ant-row.ant-form-item{
+    // margin: 0 0 0px 0 !important;
+  }
+  .ant-form-item-control{
+    // height: 64px !important;
+  }
+  .New-flex-layout{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-flow: wrap;
+    padding: 18px 40px 25px 40px;
+    .ant-form-item{
+      display: flex;
+    }
+    .ant-row.ant-form-item{
+      flex: 0 0 calc(~'100% / 3 - 20px');
+      margin: 0 0 20px 0;
+      .ant-form-item-control, .ant-form-item-label{
+        line-height: 32px
+      }
+      .ant-col.ant-form-item-label{
+        flex: 0 0 calc(~'110px') !important;
+        label::after{
+          margin: 0 16px 0 4px !important;
+        }
+      }
+      .ant-col.ant-form-item-control-wrapper{
+        flex: 0 0 calc(~'100% - 110px') !important;
+        .ant-form-item-children {
+          & > .ant-input, & > .ant-select, .filter-form-item.ant-input-affix-wrapper{
+            width: 100% !important;
+          }
+        }
+      }
+      .item-separation{
+        margin: 0 30px !important;
+      }
+    }
+  }
+}
+.ant-form.ant-form-inline.new-flex-layout{
+  .ant-row.ant-form-item.item-separation{
+    margin: 0 30px !important;
+  }
+}
+

@@ -1,0 +1,114 @@
+.index-page{
+   width: 100%;
+}
+.overview-bar{
+   display: flex;
+   width: 100%;
+   height:130px;
+   justify-content: space-between;
+   .data-overview{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      li{
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         width: 24%;
+         padding: 20px 24px;
+         border-radius: 4px;
+         h2{
+            color: #fff;
+            font-size: 36px;
+         }
+         p{
+            color: #fff;
+            font-size: 16px;
+            margin-top: -2px;
+         }
+         img{
+            width: 96px;
+            height: 96px;
+         }
+         &:nth-child(1){
+            background-color: #39487D ;
+         }
+         &:nth-child(2){
+            background-color: #5373E9;
+         }
+         &:nth-child(3){
+            background-color: #388CD1;
+         }
+         &:nth-child(4){
+            background-color: #52BFC9;
+         }
+      }
+   }
+   .base-info{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 28%;
+      box-shadow: 0 2px 6px 0 rgba(59,108,255,0.10);
+      background: url('../../assets/images/userinfo-bg.png') no-repeat;
+      background-size: 100% 100%;
+      .base-info-content{
+         display: flex;
+      }
+      .user-icon{
+         width: 50px;
+         height: 50px;
+         margin-right: 15px;
+      }
+      .user{
+         font-size: 16px;
+         color: #333333;
+      }
+      .time{
+         font-size: 14px;
+         color: #8B909A;
+      }
+   }
+}
+.charts-containers{
+   display: flex;
+   flex-grow: 1;
+   .charts-box{
+      flex-grow: 1;
+      padding: 20px 20px 10px 0;
+      &:last-child{
+         padding-right: 0;
+      }
+      &>div{
+         background-color: #fff;
+         &>div{
+            &:first-child{
+               width: 100% !important;
+            }
+         }
+      }
+      .title{
+         padding-bottom: 10px;
+         font-size: 18px;
+         color: #8B909A;
+      }
+      .empty-chart{
+         background-image: url('~@/assets/images/noData.svg');
+         background-repeat: no-repeat;
+         height: 400px;
+         background-position-x: calc(~'100% / 2');
+         background-position-y: calc(~'100% / 2');
+         p{
+            position: relative;
+            width: 100px;
+            height: 50px;
+            top: 300px;
+            left: calc(100% / 2 - 30px);
+            display: block;
+            z-index: 99;
+            font-size: 16px;
+            color: #8B909A;
+         }
+      }
+   }
+}
